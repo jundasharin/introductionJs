@@ -15,13 +15,13 @@ let data = {
     website: "hildegard.org",
     }
 
-let newData = {...data}
-newData.name = "Ahmad Jundan Harish"
-newData.username = "heyjuund"
-newData.email = "harisjundan@gmail.com"
-newData.hobby = "running"
-
-let {street,city} = data.address
+let newData = {...data,
+    name : "Ahmad Jundan Harish",
+    username : "heyjuund",
+    email : "harisjundan@gmail.com",
+    hobby : ["running","traveling"]}
 
 console.log(newData)
-console.log(street,city)
+
+let {street,city} = data.address
+console.log(street +', '+ city)

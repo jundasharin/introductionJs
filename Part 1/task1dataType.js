@@ -36,3 +36,5 @@ const Biodata = {
                 }],
             interest_in_coding: true 
         };
+
+console.log(Biodata)

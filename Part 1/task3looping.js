@@ -1,4 +1,4 @@
-const printSegitiga = 5;
+const printSegitiga = "aa";
 
 if(typeof printSegitiga == "number"){
 	for (let i = printSegitiga; i >= 1; i--) {
@@ -9,4 +9,4 @@ if(typeof printSegitiga == "number"){
 		}
 	console.log(num);
 }}
-else (console.log("Data must be number"))
+else (console.log("Data harus number"))
