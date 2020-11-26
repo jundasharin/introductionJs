@@ -1,5 +1,3 @@
-// Buat program menggunakan then catch dan try catch untuk mengecek hari kerja
-
 const cekHariKerja = day => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -12,13 +10,13 @@ const cekHariKerja = day => {
             }else{
                 reject(new Error('Hari ini bukan hari kerja'))
             }
-        },  3000)
+        },  1000)
     })
 }
 
 // Pengunaan then dan catch
-cekHariKerja('senin')
-    .then(res => console.log(res))
+cekHariKerja('sabtu')
+    .then(res => console.log(`${res} KERJA KERJA KERJA`))
     .catch(err => console.log(err.message))
 
 // Jika langsung di console.log(cekHariKerja('SENIN')) maka status promisenya pending untuk menangkap data resolve / reject menggunakan then dan catch
@@ -29,7 +27,7 @@ cekHariKerja('senin')
 const asyncWeek = async(param) => {
     try{
         const result = await(cekHariKerja(param))
-        console.log(result)
+        console.log(`${result} TIPES`)
     }catch(err){
         console.log(err.message)
     }

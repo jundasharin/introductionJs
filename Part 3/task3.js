@@ -1,4 +1,4 @@
-// 1
+// 1 ========================================================================================================================
 
 const cekMenu = menu => {
     console.log('Loading...')
@@ -13,7 +13,7 @@ const cekMenu = menu => {
             }else{
                 reject(new Error('Tidak ada di menu'))
             }
-        },  2000)
+        }, 1000)
     })
 }
 
@@ -21,19 +21,30 @@ cekMenu('teh')
     .then(res => console.log(`${res}nya ada`))
     .catch(err => console.log(err.message))
 
-//2
+//2 ========================================================================================================================
 
-const cekId = (param) => {
-    fetch(`https://jsonplaceholder.typicode.com/todos/${param}`)
-    .then(res => res.json())
-    .then(result => {
-        if(result.error){
-            console.log(result.error)
-        }else{
-            console.log(result.title)
-        }
+const cekKetersediaan = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const ready = false
+            if(ready){
+                resolve()
+            }else{
+                reject(new Error('Eh... Kosong Broo'))
+        }}, 2500)     
+        setTimeout(() => {
+            console.log('Bentar')
+        }, 2000)
     })
-    .catch(err => console.log(err))
 }
 
-cekId(10)
+const pesan = async(param) => {
+    try{
+        await(cekKetersediaan(param))
+        console.log(`Mohon ditunggu`)
+    }catch(err){
+        console.log(err.message)
+    }
+}
+
+pesan()
