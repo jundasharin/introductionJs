@@ -17,4 +17,4 @@ const callback = (data,limit) =>{
     console.log(hasil)
 }
 
-searchName("LA",3, callback);
+searchName("AN",2, callback);

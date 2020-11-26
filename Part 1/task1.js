@@ -4,7 +4,7 @@
 //contoh:
 let nomer = 123.4567
 
-console.log('1. hasil nomer.toFixed(2): '+ nomer.toFixed(2))
+console.log('1. hasil nomer.toFixed(6): '+ nomer.toFixed(2))
 
 //2. Number - toPrecision
 //Mengembalikan string yang mewakili objek angka ke presisi yang ditentukan

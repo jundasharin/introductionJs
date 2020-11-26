@@ -5,12 +5,12 @@ const seleksiNilai = (nilaiAwal, nilaiAkhir, dataArray) => {
         }
         let filter = dataArray.filter(valueBetween).sort((a,b) => a-b );
         
-            if (dataArray.length > 5) {
-            console.log(filter)
-            }
-            else (console.log("Jumlah angka dalam dataArray tidak ada"))
+        if (dataArray.length > 5) {
+        console.log(filter)
+        }
+        else (console.log("Jumlah angka dalam dataArray tidak ada"))
     }
     else (console.log("Nilai akhir harus lebih besar dari awal"))
 } 
 
-seleksiNilai(3,10,[9,4,7,5,10,11]);
+seleksiNilai(3,10,[4,6,7,8]);
