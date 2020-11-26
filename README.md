@@ -1,4 +1,4 @@
-# introductionJs
+# introductionJs - Arkademy Bootcamp
 
 ### Part 1:
 1. Task 1 : Membuat data type dengan mingisibiodata diri
