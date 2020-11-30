@@ -1,8 +1,16 @@
 const arkFood = (harga, voucher, jarak, pajak) => {
-
-    const hargaAntar = 5000 + ((jarak-2)*3000)
-    const kenaPajak = 0.05 * harga
+    
     console.log(`Harga : ${harga}`)
+    
+    const ongkir = () => {
+        if (jarak <= 2){
+          return 5000
+        } else {
+            return 5000 + ((jarak-2)*3000)
+        }}
+
+    const hargaAntar = ongkir()
+    const kenaPajak = 0.05 * harga
 
     if (harga >= 50000){
         if (voucher == "ARKFOOD5"){
@@ -67,4 +75,4 @@ const arkFood = (harga, voucher, jarak, pajak) => {
     }
 }
 
-arkFood(75000,"DITRAKTIRDEMY",3,true)
+arkFood(75000,"DITRAKTIRDEMY",3,false)
